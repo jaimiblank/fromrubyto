@@ -1,2 +1,17 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="home-container">
+  <header>
+    <h1>From Ruby to</h1>
+    <h2>Where do you want to go?</h2>
+  </header>
+
+  <div class="card-container">
+    <% Topic.all.first(10).each do |topic| %>
+      <%= link_to topic_path(name: topic.name), class: "card" do %>
+        <div>
+          <h3><%= topic.name %></h3>
+          <p><%= topic.subtitle %></p>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>

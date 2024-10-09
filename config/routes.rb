@@ -8,4 +8,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+
+  get "/:name", to: "topics#show", as: :topic, constraints: { name: /.+/ }
+  # get "/request", to: "pages#request"
 end

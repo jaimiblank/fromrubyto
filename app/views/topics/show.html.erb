@@ -1,0 +1,11 @@
+<div class="container">
+  <h1><%= @topic.name %></h1>
+  <h2><%= @topic.subtitle %></h2>
+  <div class="content">
+    <% if @topic.content.present? %>
+      <%= @topic.content %>
+    <% else %>
+      <p>Content goes here</p>
+    <% end %>
+  </div>
+</div>

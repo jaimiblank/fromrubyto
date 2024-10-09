@@ -1,1 +1,76 @@
 // Specific CSS for your home-page
+.home-container {
+  font-family: 'Playfair Display', serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+
+  header {
+    text-align: center;
+    margin-bottom: 40px;
+    background-color: #e6f2ff; // Light blue background
+    padding: 40px 0;
+    border-radius: 8px;
+
+    h1 {
+      font-size: 3em;
+      color: #e74c3c;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 1.5em;
+      color: #3498db;
+    }
+  }
+
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+
+    .card {
+      background-color: #ffffff; // White background
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 20px;
+      width: calc(20% - 20px);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: translateY(-5px);
+        background-color: #d6eaff; // Lighter blue on hover
+      }
+
+      h3 {
+        color: #2c3e50;
+        margin-bottom: 10px;
+      }
+
+      p {
+        color: #7f8c8d;
+        font-size: 0.9em;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .home-container .card-container .card {
+    width: calc(25% - 20px);
+  }
+}
+
+@media (max-width: 900px) {
+  .home-container .card-container .card {
+    width: calc(33.33% - 20px);
+  }
+}
+
+@media (max-width: 600px) {
+  .home-container .card-container .card {
+    width: calc(50% - 20px);
+  }
+}
