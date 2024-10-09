@@ -1,2 +1,28 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="homepage">
+  <header>
+    <nav>
+      <%# <div class="logo">JaimiKlein</div> %>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><%= link_to 'About', about_path %></li>
+        <li><%= link_to 'Projects', projects_path %></li>
+        <li><%= link_to 'Skills', skills_path %></li>
+        <li><%= link_to 'Contact', contact_path %></li>
+      </ul>
+    </nav>
+    <%# <button class="cta-button">Hire Me</button> %>
+  </header>
+
+  <main>
+    <div class="hero">
+      <div class="hero-content">
+        <h1>Hello, I'm Jaimi Klein</h1>
+        <p>Software Developer</p>
+      </div>
+      <div class="hero-image">
+        <%= image_tag 'profile_photo.jpg', alt: 'Jaimi Klein' %>
+      </div>
+    </div>
+
+  </main>
+</div>
